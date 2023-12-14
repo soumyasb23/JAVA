@@ -1,0 +1,67 @@
+//Write a java program for a Staff class having three variables StaffName , StaffId , Phone and salary . Define the required constructors to initialise the value to its
+//variables as shown in output. Define method display to print the value in the same format as shown here : Create 4 objects with passing the appropriate parameters to the constructor.
+//Test cases :
+//Staffid Staffname Salary Phone
+//101 Ram 1000.0 987654321
+//102 null 0.0 765489322
+//103 Shyam 5000.0 657894321
+//104 Sita 0.0 623489076
+
+class Staff{
+	int StaffId;
+	String StaffName;
+	int Phone;
+	double Salary;
+	
+	public Staff(int id, String name,  double sal, int ph) {
+		StaffId=id;
+		StaffName=name;
+		Salary=sal;
+		Phone=ph;
+	}
+	
+	public Staff(int id, int ph) {
+		StaffId=id;
+		Phone=ph;
+	}
+	
+	public Staff(String name,  double sal, int ph) {
+		StaffName=name;
+		Salary=sal;
+		Phone=ph;
+	}
+	
+	public Staff(int id, String name, int ph) {
+		StaffId=id;
+		StaffName=name;
+		Phone=ph;
+	}
+	
+	public void display() {
+		
+		System.out.print(StaffId+"\t");
+		System.out.print(StaffName+"\t");
+		System.out.print(Salary+"\t");
+		System.out.print(Phone);
+		System.out.println();
+	}
+}
+public class ClassesAndObjects {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("StaffID \t"+"StaffName \t"+"Salary \t"+"Phone ");
+		Staff s1 = new Staff(101,"Ram", 1000.0, 987654321 );
+		s1.display();
+		
+		Staff s2 = new Staff(102, 757643724);
+		s2.display();
+		
+		Staff s3 = new Staff("Shyam", 5000.0, 657654321 );
+		s3.display();
+
+		Staff s4 = new Staff(104,"Sita", 623654321 );
+		s4.display();
+	}
+
+}
