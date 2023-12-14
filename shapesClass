@@ -1,0 +1,72 @@
+// 2. Define class Square with a variable to initialise the side length with the help of a
+//constructor. Define two methods which will return area and parimeter of square .
+//Define class cube with appropriate variable name and constructor to initialise the
+//value . Define two methods which will return volume and total surface area of cube .
+//Define class circle having a variable radius with the appropriate required constructor
+//to initialise its value and will have two methods to print the area and circumference
+//to the console .
+//Define main class , make an object of each class and envoke all the possible methods
+//and display it . 
+
+class Square{
+	int side;
+	
+	public Square(int len) {
+		side=len;
+	}
+	
+	public int area() {
+		int ar=side*side;
+		return ar;
+	}
+	
+	public int perimeter() {
+		int peri= 4*side*side;
+		return peri;
+	}
+}
+
+class Cube{
+	int side;
+	
+	public Cube(int a) {
+		side=a;
+	}
+	
+	public int volume() {
+		return side*side*side;
+	}
+	
+	public int surfaceArea() {
+		return 6*side*side;
+	}
+}
+class Circle{
+	double r;
+	
+	public Circle(double radius) {
+		r=radius;
+	}
+	public double area() {
+		return 3.14*r*r;
+	}
+	public double circumference() {
+		return 2*3.14*r;
+	}
+}
+public class AccessorModifier {
+	public static void main(String args[]) {
+		Square s = new Square(4);
+		System.out.println("Perimeter of square "+ s.perimeter());
+		System.out.println("Area of square "+ s.area());
+		System.out.println();
+		Cube c = new Cube(3);
+		System.out.println("Volume of cube "+ c.volume());
+		System.out.println("Surface area  of cube "+ c.surfaceArea());
+		System.out.println();
+		Circle cir = new Circle(3.7);
+		System.out.println("Area of circle "+ cir.area());
+		System.out.println("Area of circumference "+ cir.circumference());
+		
+	}
+}
