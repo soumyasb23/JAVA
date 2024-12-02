@@ -20,7 +20,7 @@ class Student{
 	}	
 }
 
-class Manager extends Employee{
+class Manager extends Student{
 	String secretary;
 	Manager(String n, double s, String sec){
 		super(n,s);
