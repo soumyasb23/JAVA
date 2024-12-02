@@ -1,4 +1,4 @@
-class Employee{
+class Student{
 	private String name;
 	private double salary;
 	Employee(String n, double s){
